@@ -1,0 +1,17 @@
+//primitive types
+const number = 1
+const num2 = number
+
+//reference types
+const person = {
+    name: "Ahrar"
+}
+//only copies the pointer reference to person
+const secondPerson = person
+console.log(secondPerson)
+person.name = "Hayat"
+console.log(secondPerson)
+
+//creates a new object
+const secondPersonSecond = {...person}
+console.log(secondPersonSecond)
