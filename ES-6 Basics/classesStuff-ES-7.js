@@ -9,7 +9,7 @@ class Human {
 class Person extends Human {
     //this statement is directly acting as the constructor 
     name = "Ahrar"
-    gender = "Female"
+    gender = "Male"
 
     printMyName = () => {
         console.log(this.name)
