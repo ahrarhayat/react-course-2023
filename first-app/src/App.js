@@ -13,7 +13,7 @@ const App = () => {
     {
       id: "e3",
       title: "AC Mirage",
-      amount: 294.67,
+      amount: 100,
       date: new Date(2021, 2, 28),
     },
     {
