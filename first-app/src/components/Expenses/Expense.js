@@ -5,7 +5,7 @@ import ExpensesFilter from "./ExpensesFilter";
 import React, { useState } from "react";
 function Expense(props) {
   const [filteredYear, setFilteredYear] = useState("2023");
-  let filterInfoText = '2019, 2020, 2021, 2022'
+  let filterInfoText = "2019 , 2020, 2021, 2022"
   if(filteredYear === '2019')
     {
       filterInfoText = "2020 , 2021, 2022, 2023"
