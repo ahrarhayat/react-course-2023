@@ -8,19 +8,19 @@ function Expense(props) {
   let filterInfoText = '2019, 2020, 2021, 2022'
   if(filteredYear === '2019')
     {
-      filterInfoText = "2020, 2021, 2022, 2023"
+      filterInfoText = "2020 , 2021, 2022, 2023"
     }
     else if(filteredYear === '2020') {
-      filterInfoText = "2019 ,2021 ,2022 , 2023"
+      filterInfoText = "2019 , 2021 , 2022 , 2023"
     }
     else if(filteredYear === '2021') {
-      filterInfoText = "2019 ,2020 ,2022 , 2023"
+      filterInfoText = "2019 , 2020 , 2022 , 2023"
     }
     else if(filteredYear === '2022') {
-      filterInfoText = "2019 ,2020 ,2021 , 2023"
+      filterInfoText = "2019 , 2020 , 2021 , 2023"
     }
     else if(filteredYear === '2023') {
-      filterInfoText = "2019 ,2020 ,2021 , 2022"
+      filterInfoText = "2019 , 2020 , 2021 , 2022"
     }
   const changeYearHandler = (enteredYear) => {
     console.log("Expense.js");
