@@ -23,8 +23,9 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-
-const addExpenseHandler = expense => {
+//the same thing is repeated here as the onAddExpense is passed on as a function to the NewExpense
+//component and can be accessed as it is passed on as a param to onAddExpense
+const addExpenseHandler = (expense) => {
   console.log('In app js')
   console.log(expense)
 };

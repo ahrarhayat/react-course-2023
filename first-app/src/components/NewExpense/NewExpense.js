@@ -2,6 +2,8 @@ import React from 'react';
 import ExpenseForm from './ExpenseForm';
 import "./NewExpense.css"
 const NewExpense = (props) => {
+    //enteredExpenseData acts like an event here and gets the expenseData from ExpenseForm.js(child)
+    //the data is passed on the onSaveExpenseData funtion as param
     const saveExpenseDataHandler = (enteredExpenseData) => {
         const expenseData = {
             ...enteredExpenseData,
