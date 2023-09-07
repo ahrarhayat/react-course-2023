@@ -9,7 +9,7 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
             id: Math.random().toString()
         };
-        console.log(expenseData)
+        console.log('item being added on NewExpense.js and sent back to App.js',expenseData)
         props.onAddExpense(expenseData)
     };
     return <div className='new-expense'>
