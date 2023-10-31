@@ -2,7 +2,7 @@ import React from "react";
 import ExpenseItem from "./ExpenseItem";
 import "./ExpensesList.css";
 const ExpensesList = (props) => {
-  let expensesContent = <p className="para">No expenses found</p>;
+  let expensesContent = <p className="expenses-list__fallback">No expenses found</p>;
     //  {/* {expensesFiltered.length === 0 ? (
     //       <p className="para">No expenses found</p>
     //     ) : (
