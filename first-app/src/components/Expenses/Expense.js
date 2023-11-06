@@ -30,7 +30,7 @@ function Expense(props) {
             defaultYear={filteredYear}
             onChangeYear={changeYearHandler}
           />
-          <ExpensesChart expenses={expensesFiltered}/>
+          <ExpensesChart expenses={expensesFiltered} />
           <p className="para">Data for years {filterInfoText} is hidden</p>
           <ExpensesList expensesFiltered={expensesFiltered} />
         </Card>
