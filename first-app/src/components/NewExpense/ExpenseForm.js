@@ -4,6 +4,7 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
   // const[userInput, setUserInput]=useState({
   //     enteredTitle: '',
   //     enteredAmount: '',
@@ -24,6 +25,10 @@ const ExpenseForm = (props) => {
     setEnteredDate(event.target.value);
     // setUserInput({...userInput,enteredDate: event.target.value})
   };
+
+  const expenseFormHandler = () => {
+    setIsEditing(!isEditing);
+  };
   const submitHandler = (event) => {
     event.preventDefault();
     const expenseData = {
@@ -38,8 +43,10 @@ const ExpenseForm = (props) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    setIsEditing(!isEditing);
   };
-  return (
+
+  let expenseForm = isEditing ? (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
@@ -72,9 +79,24 @@ const ExpenseForm = (props) => {
       </div>
       <div className="new-expense__actions">
         <button type="submit">Add Expense</button>
+        <button type="reset" onClick={expenseFormHandler}>
+          Cancel
+        </button>
       </div>
     </form>
+  ) : (
+    <div>
+      <button
+        className="new-expense-button-center"
+        type="submit"
+        onClick={expenseFormHandler}
+      >
+        Add Expense
+      </button>
+    </div>
   );
+
+  return expenseForm;
 };
 
 export default ExpenseForm;
